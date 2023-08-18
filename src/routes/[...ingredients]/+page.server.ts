@@ -1,11 +1,11 @@
-import type { Character } from "$lib/types/db.js";
+import type { Character } from "$lib/types.js";
 import { error } from "@sveltejs/kit";
 import { pg } from "$lib/server/db";
 
 export async function load({ params }) {
 	const ingredientNames = params.ingredients.split("/");
 
-	const ingredients = await pg("character").whereIn("name", ingredientNames);
+	const ingredients = await pg("base_character").whereIn("name", ingredientNames);
 
 	if (ingredientNames.some((i) => !ingredients.find((x) => x.name == i))) {
 		throw error(404, "Not Found");

@@ -1,4 +1,4 @@
-import type { Character } from "$lib/types/db.d";
+import type { Character } from "$lib/types";
 import type { Knex } from "knex";
 
 // See https://kit.svelte.dev/docs/types#app

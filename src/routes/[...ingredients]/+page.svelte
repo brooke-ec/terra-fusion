@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
+	import CharacterInfo from "$lib/components/CharacterInfo.svelte";
+	import Container from "$lib/components/Container.svelte";
+	import arrow from "$lib/assets/arrow.svg";
 	import Fa from "svelte-fa";
 
 	export let data;
@@ -9,9 +12,20 @@
 	<Fa icon={faTrashCan} /> Clear
 </a>
 
-<div class="container" />
+<Container>
+	{#each data.ingredients as character}
+		<CharacterInfo {character} />
+	{/each}
+</Container>
 
-{JSON.stringify(data.ingredients)}
+{#if data.result}
+	<div class="arrow-container">
+		<img src={arrow} alt="A large arrow." />
+	</div>
+	<Container>
+		<CharacterInfo character={data.result} />
+	</Container>
+{/if}
 
 <style lang="scss">
 	.clear {
@@ -26,10 +40,8 @@
 		}
 	}
 
-	.container {
-		background-color: var(--background-9);
-		border-radius: 10px;
-		min-height: 400px;
-		margin: 10px 0;
+	.arrow-container {
+		justify-content: center;
+		display: flex;
 	}
 </style>
