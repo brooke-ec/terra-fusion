@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 	import Fa from "svelte-fa";
+
+	export let data;
 </script>
 
 <a class="clear" href="/">
@@ -8,6 +10,8 @@
 </a>
 
 <div class="container" />
+
+{JSON.stringify(data.ingredients)}
 
 <style lang="scss">
 	.clear {
