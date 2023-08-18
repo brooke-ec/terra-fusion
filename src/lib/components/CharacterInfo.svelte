@@ -1,4 +1,5 @@
 <script lang="ts">
+	import fallback from "$lib/assets/fallback.png?format=webp";
 	import type { Character } from "$lib/types";
 
 	export let character: Character;
@@ -11,7 +12,7 @@
 		<p>{character.description}</p>
 	</div>
 	<div class="image">
-		<img src={character.image} alt="A picture of {character.name}." />
+		<img src={character.image ?? fallback} alt="A picture of {character.name}." />
 	</div>
 </div>
 
