@@ -4,6 +4,7 @@
 	import Container from "$lib/components/Container.svelte";
 	import arrow from "$lib/assets/arrow.svg";
 	import Fa from "svelte-fa";
+	import CharacterSelector from "$lib/components/CharacterSelector.svelte";
 
 	export let data;
 </script>
@@ -16,6 +17,13 @@
 	{#each data.ingredients as character}
 		<CharacterInfo {character} />
 	{/each}
+	{#if data.additions.length}
+		<div class="add-character">
+			<h1>Add a Character</h1>
+			<br />
+			<CharacterSelector options={data.additions} />
+		</div>
+	{/if}
 </Container>
 
 {#if data.result}
@@ -30,6 +38,8 @@
 <style lang="scss">
 	.clear {
 		color: var(--accent-red-10);
+		position: absolute;
+		margin-top: -13px;
 
 		&:hover {
 			color: var(--accent-red-9);

@@ -12,11 +12,3 @@
 		<CharacterSelector options={data.baseCharacters} />
 	</div>
 </Container>
-
-<style lang="scss">
-	.add-character {
-		flex-direction: column;
-		align-items: center;
-		display: flex;
-	}
-</style>

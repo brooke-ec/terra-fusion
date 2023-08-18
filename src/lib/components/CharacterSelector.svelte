@@ -3,6 +3,7 @@
 	import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 	import type { Character } from "$lib/types";
 	import { goto } from "$app/navigation";
+	import { page } from "$app/stores";
 	import Fa from "svelte-fa";
 
 	export let options: Character[];
@@ -13,8 +14,8 @@
 	} = createCombobox<Character>({
 		loop: true,
 		onValueChange: ({ next }) => {
-			if (next) goto(`${next.name}`);
-			return next;
+			if (next) goto(`${$page.url.pathname.replace(/^\/+/g, "")}/${next.name}`);
+			return undefined;
 		},
 		filterFunction: ({ itemValue, input }) => {
 			return itemValue.name.toLowerCase().includes(input.toLowerCase().trim());
