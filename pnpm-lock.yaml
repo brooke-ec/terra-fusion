@@ -46,6 +46,9 @@ devDependencies:
   '@sveltejs/adapter-auto':
     specifier: ^2.0.0
     version: 2.1.0(@sveltejs/kit@1.22.4)
+  '@sveltejs/adapter-cloudflare':
+    specifier: ^2.3.2
+    version: 2.3.2(@sveltejs/kit@1.22.4)
   '@sveltejs/kit':
     specifier: ^1.20.4
     version: 1.22.4(svelte@4.1.2)(vite@4.4.8)
@@ -130,6 +133,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@cloudflare/workers-types@4.20230814.0:
+    resolution: {integrity: sha512-+jHiGjZg2UpULZSSHmHLqUG45TLg1s+uppSMlGvMn0u/xyFsRX9HX6b8Ydg/oHSp3jfSuPtX05GSvtgRAmrWTg==}
+    dev: true
 
   /@esbuild-plugins/node-globals-polyfill@0.1.1(esbuild@0.16.3):
     resolution: {integrity: sha512-MR0oAA+mlnJWrt1RQVQ+4VYuRJW/P2YmRTv1AsplObyvuBMnPHiizUF95HHYiSsMGLhyGtWufaq2XQg6+iurBg==}
@@ -681,6 +688,17 @@ packages:
     dependencies:
       '@sveltejs/kit': 1.22.4(svelte@4.1.2)(vite@4.4.8)
       import-meta-resolve: 3.0.0
+    dev: true
+
+  /@sveltejs/adapter-cloudflare@2.3.2(@sveltejs/kit@1.22.4):
+    resolution: {integrity: sha512-BpgFmVJInF2D0Uo41gJtvYyTiZ6P/xkfrQSqPHQOGYsjvFeW+1AjX/8MPIJ3VJyvbVgyRaVKMBsXWHADbAYatQ==}
+    peerDependencies:
+      '@sveltejs/kit': ^1.0.0
+    dependencies:
+      '@cloudflare/workers-types': 4.20230814.0
+      '@sveltejs/kit': 1.22.4(svelte@4.1.2)(vite@4.4.8)
+      esbuild: 0.18.18
+      worktop: 0.8.0-next.15
     dev: true
 
   /@sveltejs/kit@1.22.4(svelte@4.1.2)(vite@4.4.8):
@@ -1793,6 +1811,11 @@ packages:
       resolve: 1.22.4
     dev: false
 
+  /regexparam@2.0.1:
+    resolution: {integrity: sha512-zRgSaYemnNYxUv+/5SeoHI0eJIgTL/A2pUtXUPLHQxUldagouJ9p+K6IbIZ/JiQuCEv2E2B1O11SjVQy3aMCkw==}
+    engines: {node: '>=8'}
+    dev: true
+
   /resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
     engines: {node: '>=4'}
@@ -2301,6 +2324,14 @@ packages:
       '@cloudflare/workerd-linux-arm64': 1.20230724.0
       '@cloudflare/workerd-windows-64': 1.20230724.0
     dev: false
+
+  /worktop@0.8.0-next.15:
+    resolution: {integrity: sha512-0ycNO52P6nVwsjr1y20zuf0nqJatAb8L7MODBfQIxbxndHV5O4s50oZZMHWhJG1RLpHwbK0Epq8aaQK4E2GlgQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      mrmime: 1.0.1
+      regexparam: 2.0.1
+    dev: true
 
   /wrangler@3.4.0:
     resolution: {integrity: sha512-sATQ84zH/zFUHSaa4hY3V24TBrad3R9HhGV47U6Ek7XRQDLQHBm0jt84mJD3sSV/hhaq5s+xidIYulhm+m1/Tg==}
