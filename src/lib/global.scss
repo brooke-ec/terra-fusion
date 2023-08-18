@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 html {
 	--text-1: #ffff;
 
@@ -6,5 +8,12 @@ html {
 	--background-10: #222222;
 	--background-11: #303030;
 
+	--accent-red-8: #ad1b1b;
+	--accent-red-9: #d63838;
+	--accent-red-10: #ff6060;
+}
+
+body {
+	font-family: "Roboto", sans-serif !important;
 	color: var(--text-1);
 }
