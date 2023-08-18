@@ -24,11 +24,14 @@
 	"dependencies": {
 		"@fortawesome/free-regular-svg-icons": "^6.4.2",
 		"@fortawesome/free-solid-svg-icons": "^6.4.2",
+		"@melt-ui/pp": "^0.1.2",
+		"@melt-ui/svelte": "^0.37.0",
 		"greset": "^2.0.0",
 		"knex": "^2.5.1",
 		"pg": "^8.11.3",
 		"sass": "^1.66.0",
 		"svelte-fa": "^3.0.4",
+		"svelte-sequential-preprocessor": "^2.0.1",
 		"wrangler": "^3.4.0"
 	}
 }

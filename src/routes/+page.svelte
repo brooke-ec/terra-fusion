@@ -1,9 +1,22 @@
 <script lang="ts">
+	import CharacterSelector from "$lib/components/CharacterSelector.svelte";
+	import Container from "$lib/components/Container.svelte";
+
 	export let data;
 </script>
 
-{#each data.baseCharacters as character}
-	<div>
-		<h1>{character.name}</h1>
+<Container>
+	<div class="add-character">
+		<h1>Select a Character</h1>
+		<br />
+		<CharacterSelector options={data.baseCharacters} />
 	</div>
-{/each}
+</Container>
+
+<style lang="scss">
+	.add-character {
+		flex-direction: column;
+		align-items: center;
+		display: flex;
+	}
+</style>
