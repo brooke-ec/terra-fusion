@@ -14,5 +14,6 @@
 		padding: 10px;
 		height: 80px;
 		width: 100%;
+		z-index: 10;
 	}
 </style>
