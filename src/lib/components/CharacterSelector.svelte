@@ -30,21 +30,23 @@
 
 <div class="dropdown-menu" use:melt={$menu}>
 	{#if $open}
-		{#each options as option (option.id)}
-			<div
-				class="option"
-				use:melt={$item({
-					value: option,
-					label: option.name,
-				})}
-			>
-				{option.name}
-			</div>
-		{/each}
+		<div class="options-container">
+			{#each options as option (option.id)}
+				<div
+					class="option"
+					use:melt={$item({
+						value: option,
+						label: option.name,
+					})}
+				>
+					{option.name}
+				</div>
+			{/each}
 
-		{#if $isEmpty && $inputValue.value !== ""}
-			<div class="option">No results found</div>
-		{/if}
+			{#if $isEmpty && $inputValue.value !== ""}
+				<div class="option">No results found</div>
+			{/if}
+		</div>
 	{/if}
 </div>
 
@@ -68,25 +70,22 @@
 	}
 
 	.dropdown-menu {
+		border-radius: 5px;
+		overflow: hidden;
+		width: 250px;
+	}
+
+	.options-container {
 		max-height: 200px;
 		overflow-y: auto;
-		width: 250px;
+	}
 
-		.option {
-			background-color: var(--background-8);
-			padding: 5px 10px;
+	.option {
+		background-color: var(--background-8);
+		padding: 5px 10px;
 
-			&:first-child {
-				border-radius: 5px 5px 0 0;
-			}
-
-			&:last-child {
-				border-radius: 0 0 5px 5px;
-			}
-
-			&[data-highlighted] {
-				background-color: var(--background-7);
-			}
+		&[data-highlighted] {
+			background-color: var(--background-7);
 		}
 	}
 </style>
