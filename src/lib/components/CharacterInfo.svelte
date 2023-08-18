@@ -17,20 +17,31 @@
 </div>
 
 <style lang="scss">
+	@import "include-media";
+
 	.container {
 		display: flex;
 		gap: 10px;
+
+		@include media("<730px") {
+			flex-direction: column-reverse;
+		}
 	}
 
 	.image {
 		justify-content: center;
 		align-items: center;
-		min-height: 320px;
 		min-width: 320px;
+		height: 320px;
 		display: flex;
 
 		img {
-			height: 320px;
+			height: 100%;
+		}
+
+		@include media("<530px") {
+			min-width: 100%;
+			height: 50vw;
 		}
 	}
 </style>
