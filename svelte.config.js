@@ -1,3 +1,5 @@
+import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill'
+import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill'
 import sequence from "svelte-sequential-preprocessor";
 import { vitePreprocess } from "@sveltejs/kit/vite";
 import adapter from "@sveltejs/adapter-cloudflare";
@@ -29,6 +31,12 @@ const config = {
 				timers: "node:timers",
 				tty: "node:tty",
 			},
+			esbuild: {
+				plugins: [
+					NodeModulesPolyfillPlugin(),
+					NodeGlobalsPolyfillPlugin()
+				]
+			}
 		}),
 	},
 };
