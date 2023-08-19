@@ -11,7 +11,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/adapter-cloudflare": "https://gitpkg.now.sh/cimnine/sveltekit/packages/adapter-cloudflare?cf_esbuild_alias",
+		"@sveltejs/adapter-cloudflare": "github:ghostdevv/temp-cf-adapter-fork",
 		"@sveltejs/kit": "^1.20.4",
 		"@types/pg": "^8.10.2",
 		"svelte": "^4.0.5",
@@ -34,6 +34,7 @@
 		"sass": "^1.66.0",
 		"svelte-fa": "^3.0.4",
 		"svelte-sequential-preprocessor": "^2.0.1",
+		"vite-plugin-node-polyfills": "^0.11.2",
 		"wrangler": "^3.4.0"
 	}
 }
