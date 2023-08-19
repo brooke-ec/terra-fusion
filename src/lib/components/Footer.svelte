@@ -1,6 +1,6 @@
 <footer>
 	<p>Characters, Images & Descriptions: TerragoesUwU</p>
-	<p>Website & Design: NimajnebEC</p>
+	<p>Website & Design: NimajnebEC & GHOST</p>
 </footer>
 
 <style lang="scss">
