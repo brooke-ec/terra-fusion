@@ -1,7 +1,7 @@
 import sequence from "svelte-sequential-preprocessor";
 import { vitePreprocess } from "@sveltejs/kit/vite";
-import adapter from "@sveltejs/adapter-cloudflare";
 import { preprocessMeltUI } from "@melt-ui/pp";
+import adapter from "@sveltejs/adapter-auto";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
