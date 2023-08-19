@@ -1,5 +1,3 @@
-import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill'
-import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill'
 import sequence from "svelte-sequential-preprocessor";
 import { vitePreprocess } from "@sveltejs/kit/vite";
 import adapter from "@sveltejs/adapter-cloudflare";
@@ -15,29 +13,7 @@ const config = {
 		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
 		// If your environment is not supported or you settled on a specific environment, switch out the adapter.
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
-		adapter: adapter({
-			external: [
-				"node:*",
-				"node:crypto",
-				"node:fs",
-				"node:stream",
-				"node:timers",
-				"node:tty",
-			],
-			alias: {
-				fs: "node:fs",
-				crypto: "node:crypto",
-				stream: "node:stream",
-				timers: "node:timers",
-				tty: "node:tty",
-			},
-			esbuild: {
-				plugins: [
-					NodeModulesPolyfillPlugin(),
-					NodeGlobalsPolyfillPlugin()
-				]
-			}
-		}),
+		adapter: adapter(),
 	},
 };
 

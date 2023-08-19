@@ -10,8 +10,6 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
-		"@esbuild-plugins/node-globals-polyfill": "^0.2.3",
-		"@esbuild-plugins/node-modules-polyfill": "^0.2.2",
 		"@sveltejs/adapter-auto": "^2.1.0",
 		"@sveltejs/adapter-cloudflare": "github:ghostdevv/temp-cf-adapter-fork",
 		"@sveltejs/kit": "^1.22.6",
@@ -36,7 +34,6 @@
 		"sass": "^1.66.1",
 		"svelte-fa": "^3.0.4",
 		"svelte-sequential-preprocessor": "^2.0.1",
-		"vite-plugin-node-polyfills": "^0.11.2",
 		"wrangler": "^3.5.1"
 	}
 }
