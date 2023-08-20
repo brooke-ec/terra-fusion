@@ -29,9 +29,9 @@
 		margin-left: -10px;
 		background: repeating-linear-gradient(
 			to right,
-			var(--accent-red-8) 0%,
+			var(--accent-red-7) 0%,
 			var(--accent-red-10) 20%,
-			var(--accent-red-8)
+			var(--accent-red-7)
 		);
 		background-size: 200% auto;
 		background-position: 0 100%;
