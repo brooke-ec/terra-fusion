@@ -8,9 +8,9 @@
 		background-color: var(--background-11);
 		justify-content: center;
 		flex-direction: column;
-		padding: 0 50px;
+		padding: 10px 50px;
+		min-height: 70px;
 		display: flex;
-		height: 70px;
 		width: 100%;
 	}
 </style>
