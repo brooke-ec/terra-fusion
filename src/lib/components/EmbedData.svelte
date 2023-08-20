@@ -10,7 +10,7 @@
 
 <svelte:head>
 	<meta content={title} property="og:title" />
-	<meta content="#ff6060" name="theme-color" />
+	<meta content="#ffcc00" name="theme-color" />
 	<meta content={description} property="og:description" />
 	{#if character}
 		<meta content={character.image} property="og:image" />
