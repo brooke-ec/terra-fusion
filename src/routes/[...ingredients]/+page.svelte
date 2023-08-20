@@ -1,13 +1,16 @@
 <script lang="ts">
+	import CharacterSelector from "$lib/components/CharacterSelector.svelte";
 	import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 	import CharacterInfo from "$lib/components/CharacterInfo.svelte";
+	import EmbedData from "$lib/components/EmbedData.svelte";
 	import Container from "$lib/components/Container.svelte";
 	import arrow from "$lib/assets/arrow.svg";
 	import Fa from "svelte-fa";
-	import CharacterSelector from "$lib/components/CharacterSelector.svelte";
 
 	export let data;
 </script>
+
+<EmbedData character={data.result} />
 
 <a class="clear" href="/">
 	<Fa icon={faTrashCan} /> Clear

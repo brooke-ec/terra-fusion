@@ -1,9 +1,12 @@
 <script lang="ts">
 	import CharacterSelector from "$lib/components/CharacterSelector.svelte";
 	import Container from "$lib/components/Container.svelte";
+	import EmbedData from "$lib/components/EmbedData.svelte";
 
 	export let data;
 </script>
+
+<EmbedData />
 
 <Container>
 	<div class="add-character">
