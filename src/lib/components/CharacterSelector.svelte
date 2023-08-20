@@ -52,6 +52,10 @@
 
 <style lang="scss">
 	.dropdown {
+		justify-content: right;
+		align-items: center;
+		display: flex;
+
 		input {
 			background-color: var(--background-8);
 			color: var(--text-10);
@@ -65,7 +69,8 @@
 
 		& > :global(.chevron) {
 			pointer-events: none;
-			margin-left: -25px;
+			position: absolute;
+			margin-right: 7px;
 		}
 	}
 
