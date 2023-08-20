@@ -1,12 +1,13 @@
 <script lang="ts">
 	import logo from "$lib/assets/logo.png?format=webp";
+	import { fade } from "svelte/transition";
 	import { navigating } from "$app/stores";
 </script>
 
 <header>
 	<img src={logo} alt="Terra Fusion Logo" height="60px" />
 	{#if $navigating}
-		<div class="loading-bar" />
+		<div class="loading-bar" transition:fade />
 	{/if}
 </header>
 
